@@ -21,3 +21,5 @@ window.CHARM_DATA=[
 {id:'ko',name:'韓国語',locale:'ko-KR',in:['아야','아파요'],out:['호 해줄게.'],jp:'ふーってしてあげるね。'},
 {id:'zh-TW',name:'中国語（国語・台湾）',locale:'zh-TW',in:['好痛','痛痛'],out:['呼呼，痛痛飛走了！'],jp:'ふーふー、痛いの飛んでいった！'},
 {id:'zh-CN',name:'中国語（普通話）',locale:'zh-CN',in:['好疼','好痛'],out:['吹吹就不疼了。'],jp:'ふーっとすれば、もう痛くないよ。'}];
+const japanUsageWeight={ja:1,'zh-CN':.94,'zh-TW':.78,vi:.88,ko:.8,tl:.74,pt:.69,id:.66,'en-US':.57,'en-GB':.57,th:.51,hi:.48,es:.45,ar:.42,ru:.36,fr:.34,de:.31,tr:.28,it:.26,uk:.24,pl:.21,nl:.19};
+window.CHARM_DATA.forEach(d=>d.japanUsageWeight=japanUsageWeight[d.id]??.18);
